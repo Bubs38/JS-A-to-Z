@@ -198,3 +198,24 @@ setTimeout(() => {
 // console.log(location.pathname);
 // console.log(location.search);
 // location.replace("http://lequipe.fr");
+
+// window.onload = () => {
+//   location.href = "http://twitter.fr"
+// }
+
+// NAVIGATOR
+// console.log(navigator.userAgent);
+
+// https://developer.mozilla.org/fr/docs/Web/API/Geolocation/getCurrentPosition
+
+//HISTORY
+// console.log(history);
+// window.history.back();
+// history.go(-2)
+
+//------------------------------------------------------------------
+// SET PROPERTY
+window.addEventListener('mousemove', (e) => {
+  nav.style.setProperty('--x', e.layerX + "px");
+  nav.style.setProperty('--y', e.layerY + "px");
+})
