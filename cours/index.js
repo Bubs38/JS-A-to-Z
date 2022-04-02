@@ -122,10 +122,79 @@ window.addEventListener("load", () => {
 
 //----------------------------------------------------------
 // FOREACH
-const boxes = document.querySelectorAll('.box');
+const boxes = document.querySelectorAll(".box");
 
 boxes.forEach((box) => {
   box.addEventListener("click", (e) => {
     e.target.style.transform = "scale(0.7)";
   });
 });
+
+//---------------------------------------------------------
+//ADDEVENTLISTENER VS ONCLICK
+// document.body.onclick = () => {
+//   console.log("Click !");
+// };
+
+//Bubbling => fin (de base l'eventlistener est en bubbling)
+document.body.addEventListener("click", () => { 
+  console.log("Click 1");
+},);
+
+//Usecapture => en premier 
+document.body.addEventListener("click", () => {
+    console.log("Click 2");
+  },true);
+
+//---------------------------------------------------
+// STOP PROPAGATION
+// questionContainer.addEventListener('click', (e) => {
+//   alert("test");
+//   e.stopPropagation();
+// });
+
+//REMOVEENEVENTLISTENER
+
+//-----------------------------------------------------------
+// BOM
+// window.open("http://google.com", "cours js", "height=600, width=800");
+
+// // window.close();
+
+
+// EVENEMENT ADOSSES A WINDOW
+
+// alert("test");
+
+//confirm
+btn2.addEventListener('click', () => {
+  confirm("Voulez-vous vraiment vous tromper ?");
+});
+
+// PROMPT
+btn1.addEventListener('click', () => {
+  let answer = prompt('Entrer votre nom !');
+  
+  questionContainer.innerHTML += "<h3>Bravo " + answer + "</h3>";
+});
+
+// TIMER ET COMPTE 0 REBOURS
+setTimeout(() => {
+  questionContainer.style.borderRadius = "300px";
+}, 2000);
+// let interval = setInterval(() => {
+//   document.body.innerHTML += 
+//     "<div class='box'><h2>Nouvelle Boîte !</h2></div>"
+// }, 1000);
+
+// document.body.addEventListener('click', (e) => {
+//   // e.target.remove();
+//   clearInterval(interval);
+// });
+
+// //Location
+// console.log(location.href);
+// console.log(location.host);
+// console.log(location.pathname);
+// console.log(location.search);
+// location.replace("http://lequipe.fr");
