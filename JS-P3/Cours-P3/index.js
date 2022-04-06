@@ -126,7 +126,7 @@ let string2 = "Javascript est un langage orienté objet";
 // console.log(string2[38]);
 // console.log(string2[string2.length - 1]);
 
-console.log(string2.indexOf("langage"));
+// console.log(string2.indexOf("langage"));
 // retourne -1 s'il ne connait pas
 
 // let newString = string2.slice(2);
@@ -145,12 +145,12 @@ console.log(string2.indexOf("langage"));
 // Méthodes Numbers
 // ---------------------------------------------------------------
 let number2 = 42.1234;
-let numberString = "42.12 est un nombre"
+let numberString = "42.12 est un nombre";
 
-  // console.log(number2.toFixed(2));
-  // console.log(parseInt("43"));
-  // console.log(parseInt(numberString));
-  // console.log(parseFloat(numberString));
+// console.log(number2.toFixed(2));
+// console.log(parseInt("43"));
+// console.log(parseInt(numberString));
+// console.log(parseFloat(numberString));
 
 //Maths
 // console.log(Math.PI);
@@ -160,8 +160,8 @@ let numberString = "42.12 est un nombre"
 // console.log(Math.pow(2, 7));
 // console.log(Math.sqrt(16));
 
-console.log(Math.random());
-console.log(Math.floor(Math.random() * 50));
+// console.log(Math.random());
+// console.log(Math.floor(Math.random() * 50));
 
 // ---------------------------------------------------------------
 // Méthodes Arrays
@@ -187,4 +187,45 @@ let newArray = array3.concat(array4);
 // console.log(array3.every((languages) => languages == "Php"));
 // console.log(array3.some((languages) => languages == "Php"));
 
+// console.log(array3.shift());
+// console.log(array3.pop());
 
+// const restArray = array3.splice(0, 2, ...array4);
+// console.log(array3);
+
+// Important
+
+let arrayNumber = [4, 74, 28, 12, 1];
+// console.log(arrayNumber.reduce((x, y) => x + y));
+arrayNumber.push(17);
+// console.log(arrayNumber);
+
+// FILTER, SORT, MAP
+
+// console.log(arrayNumber.filter((number) => number > 10));
+
+// console.log(arrayNumber.sort());
+// console.log(arrayNumber.sort((a, b) => b - a));
+// console.log(arrayNumber.sort((a, b) => a - b));
+
+// document.body.innerHTML = arrayNumber
+//   .map((number) => `<li>${number}</li>`)
+//   .join("");
+
+// -------------------------------------------------------------
+// Méthodes objets
+// -------------------------------------------------------------
+document.body.innerHTML += data
+.filter((user) => user.pseudo.includes("a"))
+.sort((a, b) => b.age - a.age)  
+.map(
+    (user) =>
+      `
+    <div class="user-card">
+      <h2>${user.pseudo}</h2>
+      <p>Age : ${user.age} ans</p>
+      <p>Statut : ${user.admin ? "Modérateur" : "Membre"}</p>
+    </div> 
+  `
+  )
+  .join("");
