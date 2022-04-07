@@ -215,17 +215,43 @@ arrayNumber.push(17);
 // -------------------------------------------------------------
 // Méthodes objets
 // -------------------------------------------------------------
-document.body.innerHTML += data
-.filter((user) => user.pseudo.includes("a"))
-.sort((a, b) => b.age - a.age)  
-.map(
-    (user) =>
-      `
-    <div class="user-card">
-      <h2>${user.pseudo}</h2>
-      <p>Age : ${user.age} ans</p>
-      <p>Statut : ${user.admin ? "Modérateur" : "Membre"}</p>
-    </div> 
-  `
-  )
-  .join("");
+// document.body.innerHTML += data
+// .filter((user) => user.pseudo.includes("a"))
+// .sort((a, b) => b.age - a.age)  
+// .map(
+//     (user) =>
+//       `
+//     <div class="user-card">
+//       <h2>${user.pseudo}</h2>
+//       <p>Age : ${user.age} ans</p>
+//       <p>Statut : ${user.admin ? "Modérateur" : "Membre"}</p>
+//     </div> 
+//   `
+//   )
+//   .join("");
+
+
+// -------------------------------------------------------------
+// Les Dates
+// -------------------------------------------------------------
+
+// Date classique 
+let date = new Date()
+
+// Timestamp
+let timestamp = Date.parse(date);
+console.log(timestamp);
+
+// IsoString
+console.log(date.toISOString());
+
+function dateParser(chaine) {
+  let newDate = new Date(chaine).toLocaleDateString("fr-FR", {
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  });
+  return newDate;
+}
+
+console.log(dateParser(date));
