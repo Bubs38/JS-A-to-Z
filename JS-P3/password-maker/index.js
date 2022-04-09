@@ -23,7 +23,7 @@ const generatePassword = () => {
   passwordOutput.value = password;
 
   passwordOutput.select();
-  document.execCommand("copy");
+  navigator.clipboard.writeText(password)
 
   generateButton.textContent = "Copié !";
 
