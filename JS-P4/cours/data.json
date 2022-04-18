@@ -1,0 +1,30 @@
+{
+  "security.workspace.trust.untrustedFiles": "open",
+  "python.defaultInterpreterPath": "/usr/local/bin/python3",
+  "workbench.editor.untitled.hint": "hidden",
+  "explorer.confirmDragAndDrop": false,
+  "[html]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "editor.formatOnSave": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "files.autoSave": "afterDelay",
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.iconTheme": "material-icon-theme",
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "editor.wordWrap": "on",
+  "git.confirmSync": false,
+  "editor.tabSize": 2,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.accessibilitySupport": "off",
+  "window.zoomLevel": 2,
+  "editor.fontLigatures": false,
+  "settingsSync.ignoredSettings": [
+  
+  ]
+}
